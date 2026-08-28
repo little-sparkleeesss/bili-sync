@@ -24,6 +24,10 @@ jobs:
     name: Build And Push Docker Image
     needs: build-binary
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+      packages: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
